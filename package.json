@@ -2,13 +2,14 @@
   "name": "angular-2",
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "starts": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
     "typings": "typings",
     "postinstall": "typings install",
-    "build":"tsc"
+    "build":"npm run tsc",
+    "start":"npm run tsc"
   },
   "license": "ISC",
   "dependencies": {
