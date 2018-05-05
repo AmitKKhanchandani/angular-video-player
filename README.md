@@ -2,7 +2,9 @@
 
 ## Angular - Video Player
 
-To get started, follow the instructions below.
+Live Demo: https://angularvideoplayer.herokuapp.com/
+
+To get the project up and running in your system, follow the instructions below.
 
 ### Install Node.js and npm
 
