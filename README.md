@@ -42,3 +42,12 @@ Now you can start the TypeScript compiler in watch mode and run lite-server with
 ### Other
 
 - [Amit K Khanchandani](https://www.amitk.co.in/)
+
+>Source Code Release under MIT Licence
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+
+##### Reporting Bugs & Issues
+
+Reporting issues is helpful but an even better approach is to send a Pull Request,
