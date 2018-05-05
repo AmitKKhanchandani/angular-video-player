@@ -28,7 +28,7 @@ install all libraries and dependencies.
 
 Now you can start the TypeScript compiler in watch mode and run lite-server with automatic refreshing.
 
-`npm start`
+`npm starts`
 
 ***
 
