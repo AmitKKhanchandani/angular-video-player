@@ -1,4 +1,4 @@
-![]()
+![](https://github.com/AmitKKhanchandani/angular-video-player/raw/master/angular%20video%20player%20project.png)
 
 ## Angular - Video Player
 
