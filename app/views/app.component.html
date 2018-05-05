@@ -1,0 +1,18 @@
+
+<h3>{{mainHeading}}</h3>
+<p>Some of the best videos on Angular from Youtube</p>
+<div class="row">
+    <div class="col-md-6">
+        <playlist [videos]="videos" (onSelectedVideo)="onVideoSelected($event)"></playlist>
+    </div>
+    <div class="col-md-5">
+        <videoplayer [video]="video"></videoplayer>
+    </div>
+</div>
+<div class="row">
+    
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center footernotice">
+        Developed by <a href="http://www.amitk.co.in/?utm_source=project&utm_medium=github_pages&utm_campaign=angular2videoplayer">Amit K Khanchandani</a>
+    </div>
+    
+</div>

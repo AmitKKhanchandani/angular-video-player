@@ -1,0 +1,19 @@
+<h2>My Video Playlist</h2>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Desc</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="#v of videos" (click)="onSelect(v)">
+            <td>{{v.id}}</td>
+            <td>{{v.title}}</td>
+            <td>{{v.desc}}</td>
+        </tr>
+    </tbody>
+
+</table>

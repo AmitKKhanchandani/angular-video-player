@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Angular 2 - Learning Video Player Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> -->
+    <!-- Load libraries (Note: IE required polyfills, in this exact order_ -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ClientJS/0.1.11/client.min.js"></script>
+    <style>
+        .navbar-default {
+        background-color: #1976d2;
+        border-color: #1976d2;
+        }
+        .navbar-default .navbar-brand {
+        color: #ffffff;
+        }
+        .navbar-default .navbar-brand:hover,
+        .navbar-default .navbar-brand:focus {
+        color: #00ccff;
+        }
+        .navbar-default .navbar-text {
+        color: #ffffff;
+        }
+        .navbar-default .navbar-nav > li > a {
+        color: #ffffff;
+        }
+        .navbar-default .navbar-nav > li > a:hover,
+        .navbar-default .navbar-nav > li > a:focus {
+        color: #00ccff;
+        }
+        .navbar-default .navbar-nav > li > .dropdown-menu {
+        background-color: #1976d2;
+        }
+        .navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+        color: #ffffff;
+        }
+        .navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+        .navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+        color: #00ccff;
+        background-color: #1976d2;
+        }
+        .navbar-default .navbar-nav > li > .dropdown-menu > li.divider {
+        background-color: #1976d2;
+        }
+        .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+        .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+        .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #00ccff;
+        background-color: #1976d2;
+        }
+        .navbar-default .navbar-nav > .active > a,
+        .navbar-default .navbar-nav > .active > a:hover,
+        .navbar-default .navbar-nav > .active > a:focus {
+        color: #00ccff;
+        background-color: #1976d2;
+        }
+        .navbar-default .navbar-nav > .open > a,
+        .navbar-default .navbar-nav > .open > a:hover,
+        .navbar-default .navbar-nav > .open > a:focus {
+        color: #00ccff;
+        background-color: #1976d2;
+        }
+        .navbar-default .navbar-toggle {
+        border-color: #1976d2;
+        }
+        .navbar-default .navbar-toggle:hover,
+        .navbar-default .navbar-toggle:focus {
+        background-color: #1976d2;
+        }
+        .navbar-default .navbar-toggle .icon-bar {
+        background-color: #ffffff;
+        }
+        .navbar-default .navbar-collapse,
+        .navbar-default .navbar-form {
+        border-color: #ffffff;
+        }
+        .navbar-default .navbar-link {
+        color: #ffffff;
+        }
+        .navbar-default .navbar-link:hover {
+        color: #00ccff;
+        }
+
+        @media (max-width: 767px) {
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+            color: #ffffff;
+        }
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+            color: #00ccff;
+        }
+        .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+        .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+        .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+            color: #00ccff;
+            background-color: #1976d2;
+        }
+        }
+        .navbar-brand{
+            padding:10px
+        }
+        .navbar-brand img{
+            height:30px;
+            display: inline-block;
+            margin-right: 10px
+        }
+    </style>
+    <!-- Configure SystemJS -->
+    <script>
+        System.config({
+            packages: {
+                app: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
+            }
+        });
+        System.import('app/js/main').then(null, console.error.bind(console));
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-default bg-primary">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://www.amitk.co.in/?utm_source=project&utm_medium=github_pages&utm_campaign=angular2videoplayer"><img src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png" alt="Angular Learning Project by Amit K Khanchandani"><span>by Amitk</span></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="http://www.amitk.co.in/about_me/">About Amit K</a></li>
+                <li><a href="#">Source Code</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <my-app>Loading...</my-app>
+    </div>
+
+<script>
+    
+	var client = new ClientJS(); // Create A New Client Object
+
+var OS = client.getOS(); // Get OS Version
+
+console.log( OS );
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+</body>
+</html>
