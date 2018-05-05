@@ -8,8 +8,8 @@
     "lite": "lite-server",
     "typings": "typings",
     "postinstall": "typings install",
-    "build":"npm run tsc",
-    "start":"npm run tsc"
+    "build":"tsc",
+    "start":"tsc"
   },
   "license": "ISC",
   "dependencies": {
