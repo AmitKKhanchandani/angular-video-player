@@ -11,6 +11,9 @@
     "build": "tsc",
     "start": "tsc"
   },
+  "engines": {
+    "node": "8.x"
+  },
   "license": "ISC",
   "dependencies": {
     "angular2": "2.0.0-beta.13",
